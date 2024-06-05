@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="/IMG_3500.jpg" class="logo" width = "200" height = "125">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#resume" target="_blank">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h2>Hi, I'm  </h2>
+            <h1 style="color: green;">Nabeel Mahmood</h1>
+            <h5>I'm Nabeel Mahmood, and this space is your gateway to my professional odyssey. 
+                Embark on a visual journey through my career milestones and discover my skills, education and experiences.
+                 Fasten your seatbelt for a tour of my career so far! </h5>
+        </div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="aboutme-col-1">
+                <img src="IMG_1778.JPG">
+            </div>
+
+            <div class="aboutme-col-2">
+                <h1 class="subtitle" style="color: green;">About Me</h1>
+
+                <h4>I am a college student at the University of Arkansas Fort Smith studying Computer Science, and I am a <span style="color: green;">Pakistani American</span>. 
+                     My academic journey revolves around the introduction to data structures, databases, and the captivating world of algorithms. I find myself engrossed in the dynamic realm of artificial intelligence, where algorithms can come to life. 
+                    Whether it's optimizing code or exploring the potential of new ideas, I'm always eager to unravel the next challenges in this ever-evolving tech field.</h4>
+                    
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                    
+                   
+                    
+                    
+                </div>
+
+
+
+
+
+                
+                <div class="tab-contents active-tab" id="education">
+                    <ul>
+                        <li><span><h4>2021 - Present</h4></span><h4>University of Arkansas Fort Smith</li>
+                            <h4>Major: Computer Science</h4>
+                        <li><span><h4>2018 - 2021</h4></span><h4>Southside High School</li>
+                      
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span><h4>May 2023 - December 2023</h4></span><h4> IT Intern at <span style="color: red;"><h3>ABB</h3></span></h4></li>
+                        <li><span><h4>December 2023 - Present</h4></span><h4>IOT Engineering Intern at <span style="color: red;"><h3>ABB</h3></span></h4></li>
+
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="skills">
+                    <ul>
+                        <h4>Problem Solving Skills</h4>
+                        <h4>Communication Skills</h4>
+                        <h4>Detail-Oriented</h4>
+                        <h4>Teamwork</h4>
+                        <h4>Efficient</h4>
+                    </ul>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add this section for the resume -->
+<div id="resume">
+    <div class="container">
+        <h1> Resume</h1>
+
+        <iframe src="https://docs.google.com/document/d/e/2PACX-1vTaDRr0_WrFrdNLmtpEjeJ30vCpseC8ujGIVOwPWcewMHdJSNTmzRLuybzuo7eI_C1CGDDeUkLNKwmL/pub?embedded=true" title="Resume" style="width: 70%; height: 800px;">
+        </iframe>
+
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <h1>Contact Me</h1>
+        <ul>
+            <li>
+                <img src="/icons8-email-50 (2).png" alt="Email Icon" width="40" height="40" style="margin-right: 30px; vertical-align: middle;">
+                <a href="mailto:nabeelmah1738@gmail.com" style="color: black; vertical-align: middle;">nabeelmah1738@gmail.com</a>
+            </li>
+            <li>
+                <img src="/icons8-phone-number-50 (2).png" alt="Phone Icon" width="40" height="40" style="margin-right: 30px; vertical-align: middle;">
+                <a href="tel:+14794626780" style="color: black; vertical-align: middle;">(479)-462-6780</a>
+            </li>
+            <li>
+                <img src="/icons8-linkedin-50 (1).png" alt="LinkedIn Icon" width="40" height="40" style="margin-right: 30px; vertical-align: middle;">
+                <a href="https://linkedin.com/in/nabeel-mahmood-56ab4b270" target="_blank" style="color: black; vertical-align: middle;">linkedin.com/in/nabeel-mahmood-56ab4b270</a>
+            </li>
+            <li>
+                <img src="/icons8-github-50.png" alt="GitHub Icon" width="40" height="40" style="margin-right: 30px; vertical-align: middle;">
+                <a href="https://github.com/nabee1mahmood" target="_blank" style="color: black; vertical-align: middle;">github.com/nabee1mahmood</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
